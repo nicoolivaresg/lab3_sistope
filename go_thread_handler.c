@@ -76,16 +76,15 @@ int main(int  argc, char ** argv){
 	// Abrir el archivo de salida y comprobar que no hay problemas
 	
 
-	// La grilla, el t actual con el que se realizan las iteraciones
-	// es grids[2], t-1 es grids[1] y t-2 es grids[0]
-	float** grids[3];
-	// Reserva de memoria para matrix
-	for (int i = 0; i < 3; ++i)
-	{
-		grids[i] = allocate_grid_memory(&grid_size);
-		// Rellenado de matriz con 0
-		grids[i] = initialize_grid(grids[i], &grid_size);	
+	// Las grillas son 3, usando % se hace un bucle a traves de estas tres grillas.
+	// Reserva de memoria para grillas
+	for (int i = 0; i < 3; ++i) {
+		grids[i] = allocate_grid_memory(grid_size);
 	}
+	// Rellenado de matrices
+	grids[0] = initialize_grid(grids[0], grid_size, 20);
+	grids[1] = initialize_grid(grids[1], grid_size, 0);
+	grids[2] = initialize_grid(grids[2], grid_size, 0);
 	
 	// Crear hebras
 
