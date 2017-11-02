@@ -11,6 +11,15 @@
 #include <string.h>
 #include <math.h>
 
+// Variables globales
+extern const float c;
+extern const float dt;
+extern const float dd;
+extern const float constantGlobal; // Constante calculada.
+
+extern float** grids[3]; // Grillas usadas para la difusion de la onda.
+extern pthread_barrier_t barrier;	// Barrera con la que se sincronizan los hilos
+
 /**
  * Funcion que obtiene la cantidad de digitos que tiene un numero.
  *

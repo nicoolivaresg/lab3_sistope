@@ -3,6 +3,16 @@
 */
 #include "util.h"
 
+// Definicion variables globales
+const float c = 1.0;
+const float dt = 0.1;
+const float dd = 2.0;
+const float constantGlobal = (2.0*2.0)*((0.1/2.0) * (0.1/2.0));
+
+float** grids[3];
+pthread_barrier_t barrier;
+
+
 int getDigits(int number)
 {
 	int digits = 1;
