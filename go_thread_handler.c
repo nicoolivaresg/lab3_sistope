@@ -72,13 +72,33 @@ int main(int  argc, char ** argv){
 	/*
 		Procesamiento
 	*/
+
+	// Abrir el archivo de salida y comprobar que no hay problemas
 	
 
-
+	// La grilla, el t actual con el que se realizan las iteraciones
+	// es grids[2], t-1 es grids[1] y t-2 es grids[0]
+	float** grids[3];
 	// Reserva de memoria para matrix
-	float ** grid = allocate_grid_memory(&grid_size);
-	// Rellenado de matriz con caracteres especiales @
-	grid = initialize_grid(grid, &grid_size);	
+	for (int i = 0; i < 3; ++i)
+	{
+		grids[i] = allocate_grid_memory(&grid_size);
+		// Rellenado de matriz con 0
+		grids[i] = initialize_grid(grids[i], &grid_size);	
+	}
+	
+	// Crear hebras
+
+
+
+	// Correr la primera iteracion y esperar con join
+
+
+	// Correr todas las iteraciones que faltan y esperar con join
+
+
+
+	// Escribir los resultados que se encuentran en grids[2] en un archivo
 
 
 
