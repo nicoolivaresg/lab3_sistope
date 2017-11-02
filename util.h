@@ -67,6 +67,17 @@ char* next_word(FILE* file);
  */
 char get_random_char();
 
+/**
+ * Funcion calcula el modulo bien.
+ * 
+ * Entrada:
+ *	number	- Numero entero a modular.
+ * 	m 		- Modulo a utilizar. 
+ * 
+ * Salida: number % m
+ */
+int mod(int number, int m);
+
 // Definir valores 'booleanos'
 #define FALSE 0
 #define TRUE 1

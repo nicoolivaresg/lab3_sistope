@@ -72,7 +72,7 @@ void* first_iteration(void* args);
  * Entrada:
  *	args - Puntero a estructura WGThread.
  */
-void* iterations(void* args);
+void* other_iterations(void* args);
 
 
 #endif

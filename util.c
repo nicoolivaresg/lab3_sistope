@@ -7,7 +7,7 @@
 const float c = 1.0;
 const float dt = 0.1;
 const float dd = 2.0;
-const float constantGlobal = (2.0*2.0)*((0.1/2.0) * (0.1/2.0));
+const float constantGlobal = (1.0*1.0)*((0.1/2.0) * (0.1/2.0));
 
 float** grids[3];
 pthread_barrier_t barrier;
@@ -67,5 +67,14 @@ char* next_word(FILE* file)
 
 char get_random_char() {
 	return (char)(rand()%((int)'z' - (int)'a' + 1) + (int)'a');
+}
+
+int mod(int number, int m)
+{
+	if(number < 0) {
+		return number + m;
+	} else {
+		return number % m;
+	}
 }
 

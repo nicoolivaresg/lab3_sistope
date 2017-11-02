@@ -41,6 +41,4 @@ float** initialize_grid(float ** grid, int N, int H);
  */
 void show_grid(float ** grid, int N);
 
-
-
 #endif
