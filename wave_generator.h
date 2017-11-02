@@ -9,38 +9,37 @@
 
 /**
  * Funcion que aloca la memoria necesaria para crear una matriz de tamaño
- * N x M, (Filas x columnas) y la retorna.
+ * N x N, (Filas x columnas) y la retorna.
  * 
  * Entrada:
- *	N	- Puntero a un entero con la cantidad de filas de la matriz.
- *  M 	- Puntero a un entero con la cantidad de columnas de la matriz.
+ *	N	- Numero entero con el tamaño de la matriz.
  * 
- * Salida: Matriz de tamaño N x M.
+ * Salida: Matriz de tamaño N x N.
  */
-float ** allocate_grid_memory(int * N);
+float ** allocate_grid_memory(int N);
 
 /**
- * Funcion que recibe una matriz de caracteres y la rellena con el caracter
- * especial '@' para luego retornarla.
+ * Funcion que recibe una matriz de flotantes y la rellena con 0s y con
+ * el valor H en las posiciones que corresponda para simular una onda
+ * cuadrada en el centro de la grilla.
  * 
  * Entrada:
- *	grid  - Matriz de caracteres.
- *	N		- Puntero a un entero con la cantidad de filas de la matriz.
- *  M 		- Puntero a un entero con la cantidad de columnas de la matriz.
+ *	grid  - Puntero a la matriz de flotantes.
+ *	N	- Numero entero con el tamaño de la matriz.
+ *	H 	- Valor que toma la onda en la grilla.
  * 
- * Salida: Matriz rellenada con el caracter especial '@'.
+ * Salida: Matriz rellenada con 0s o H donde corresponda.
  */
-float ** initialize_grid(float ** grid, int * N);
+float** initialize_grid(float ** grid, int N, int H);
 
 /**
- * Imprime una matriz de caracteres en la consola.
+ * Imprime una matriz de flotantes en la consola.
  * 
  * Entrada:
  *	grid - Matriz a imprimir en consola.
- *	N		- Puntero a un entero con la cantidad de filas de la matriz.
- *  M 		- Puntero a un entero con la cantidad de columnas de la matriz.
+ *	N	- Numero entero con el tamaño de la matriz.
  */
-void show_grid(float ** grid, int * N);
+void show_grid(float ** grid, int N);
 
 
 
