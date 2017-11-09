@@ -4,6 +4,7 @@
 int main() {
 	int i, j, k, H = 14, N = 128, T = 2000;
 	float iterations = 10;
+	float iterations12 = 25;
 	int minutes;
 	float seconds, realTime, totalTime = 0;
 	float time1;
@@ -35,7 +36,8 @@ int main() {
 				fscanf(input, " real %dm%fs", &minutes, &seconds);
 				realTime = (float)minutes * 60.0 +  seconds;
 				totalTime += realTime; /* Total execution time */
-				realTime /= iterations;
+				if(j == 0 && k <= 1) realTime /= iterations12; 
+				else realTime /= iterations;
 
 				if(i == 0) {
 					time1 = realTime;
