@@ -25,7 +25,7 @@ int main() {
 			if(k == 2) T = 8000;
 
 			char filename[100];
-			sprintf(filename, "times/time-%d-%d.txt", N, T);
+			sprintf(filename, "../times/time-%d-%d.txt", N, T);
 
 			fprintf(output, "%d,%d", N, T);
 			fprintf(speedup, "%d,%d", N, T);
