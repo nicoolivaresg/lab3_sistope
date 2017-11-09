@@ -54,9 +54,15 @@ int main(int  argc, char ** argv){
 		}
 	}
 	//En caso de que falten argumentos en la linea de comando
-	if(argc < 11){
+	if(argc == 9 && tflag == 0 && Nflag == 1 && Tflag == 1 && Hflag == 1 && fflag == 1) {
+		iterations = steps;
+	} else if(argc < 11){
 		printf("Faltan parametros para ingresar\n");
 		return 1;
+	}
+	// En caso de que la cantidad de iteraciones sea mayor a los pasos dados
+	if(iterations > steps) {
+		iterations = steps;
 	}
 	/*
 	printf("Nflag = %d, Tflag = %d, Hflag = %d, fflag = %d, tflag = %d\n", Nflag, Tflag, Hflag, fflag, tflag);
